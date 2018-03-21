@@ -76,12 +76,14 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stats_screen_stats_screen_component__ = __webpack_require__("./src/app/stats-screen/stats-screen.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__friend_card_friend_card_component__ = __webpack_require__("./src/app/friend-card/friend-card.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__messages_screen_messages_screen_component__ = __webpack_require__("./src/app/messages-screen/messages-screen.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__progressbar_progressbar_component__ = __webpack_require__("./src/app/progressbar/progressbar.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -108,7 +110,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_5__navbar_navbar_component__["a" /* NavbarComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__stats_screen_stats_screen_component__["a" /* StatsScreenComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__friend_card_friend_card_component__["a" /* FriendCardComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__messages_screen_messages_screen_component__["a" /* MessagesScreenComponent */]
+                __WEBPACK_IMPORTED_MODULE_8__messages_screen_messages_screen_component__["a" /* MessagesScreenComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__progressbar_progressbar_component__["a" /* ProgressbarComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -128,14 +131,14 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/app/friend-card/friend-card.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".card {\r\n    -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n            justify-content: center;\r\n    margin: 20px;\r\n    border-radius: 20px;\r\n    background-color: lightgray;\r\n}\r\n\r\n.profile {\r\n    padding: 20px;\r\n    padding-bottom: unset;\r\n}\r\n\r\n.info {\r\n    position: relative;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-pack: justify;\r\n        -ms-flex-pack: justify;\r\n            justify-content: space-between;\r\n    /* padding-top: 20px; */\r\n}\r\n\r\n.circle {\r\n    width: 65px;\r\n    height: 65px;\r\n    border-radius: 175px;\r\n    background-color: white;\r\n}\r\n\r\n.profile-picture {\r\n    margin-top: -40px;\r\n}\r\n\r\nimg.picture {\r\n    max-width: 100%;\r\n    border-radius: 175px;\r\n}\r\n\r\n.progressbars {\r\n    padding: 20px;\r\n}\r\n\r\n.progressbar {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    max-height: 45px;\r\n    -webkit-box-pack: justify;\r\n        -ms-flex-pack: justify;\r\n            justify-content: space-between;\r\n}\r\n\r\n.progressbar .percent {\r\n    width: 75%;\r\n}\r\n\r\n.progressbar .icon {\r\n    width: 10%;\r\n}"
+module.exports = ".card {\r\n    -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n            justify-content: center;\r\n    margin: 20px;\r\n    border-radius: 20px;\r\n    background-color: lightgray;\r\n}\r\n\r\n.profile {\r\n    padding: 20px;\r\n    padding-bottom: unset;\r\n}\r\n\r\n.info {\r\n    position: relative;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-pack: justify;\r\n        -ms-flex-pack: justify;\r\n            justify-content: space-between;\r\n    /* padding-top: 20px; */\r\n}\r\n\r\n.circle {\r\n    width: 65px;\r\n    height: 65px;\r\n    border-radius: 175px;\r\n    background-color: white;\r\n}\r\n\r\n.profile-picture {\r\n    margin-top: -40px;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n            justify-content: center;\r\n}\r\n\r\nimg.picture {\r\n    width: calc(100vw - 80px);\r\n    height: calc(100vw - 80px);\r\n    max-width: 500px;\r\n    max-height: 500px;\r\n    border-top-left-radius: 50% 50%;\r\n    border-top-right-radius: 50% 50%;\r\n    border-bottom-right-radius: 50% 50%;\r\n    border-bottom-left-radius: 50% 50%;\r\n}\r\n\r\n.progressbars {\r\n    padding: 20px;\r\n}\r\n\r\n.progressbar {\r\n    height: 45px;\r\n    max-height: 5vh;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-pack: justify;\r\n        -ms-flex-pack: justify;\r\n            justify-content: space-between;\r\n    padding: 5px 0px;\r\n}\r\n\r\n.progressbar .percent {\r\n    width: 75%;\r\n}\r\n\r\n.progressbar .icon {\r\n    width: 45px;\r\n}"
 
 /***/ }),
 
 /***/ "./src/app/friend-card/friend-card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\n\n<div class=\"card\">\n  <div class=\"profile\">\n    <div class=\"info\">\n      <div class=\"circle\"></div>\n      <div class=\"circle\"></div>\n    </div>\n    <div class=\"profile-picture\">\n      <img class=\"picture\" src=\"./assets/images/profile-picture.jpg\" alt=\"\">\n    </div>\n  </div>\n  <div class=\"progressbars\">\n    <div class=\"globe progressbar\">\n      <img class=\"percent\" src=\"./assets/images/progressbar-1.svg\" type=\"image/svg+xml\">\n      <img class=\"icon\" src=\"./assets/images/globe-icon.svg\" type=\"image/svg+xml\">\n    </div>\n    <div class=\"music progressbar\">\n      <img class=\"percent\" src=\"./assets/images/progressbar-2.svg\" type=\"image/svg+xml\">\n      <img class=\"icon\" src=\"./assets/images/music-icon.svg\" type=\"image/svg+xml\">\n    </div>\n    <div class=\"time progressbar\">\n      <img class=\"percent\" src=\"./assets/images/progressbar-3.svg\" type=\"image/svg+xml\">\n      <img class=\"icon\" src=\"./assets/images/time-icon.svg\" type=\"image/svg+xml\">\n    </div>\n  </div>\n</div>"
+module.exports = "<app-navbar></app-navbar>\n\n<div class=\"card\">\n  <div class=\"profile\">\n    <div class=\"info\">\n      <div class=\"circle\"></div>\n      <div class=\"circle\"></div>\n    </div>\n    <div class=\"profile-picture\">\n      <img class=\"picture\" src=\"./assets/images/profile-picture.jpg\" alt=\"\">\n    </div>\n  </div>\n  <div class=\"progressbars\">\n    <div class=\"globe progressbar\">\n      <app-progressbar [percentage]=\"50\" [color]=\"'blue'\" class=\"percent bar\"></app-progressbar>\n      <img class=\"icon\" src=\"./assets/images/globe-icon.svg\" type=\"image/svg+xml\">\n    </div>\n    <div class=\"music progressbar\">\n      <app-progressbar [percentage]=\"60\" [color]=\"'yellow'\" class=\"percent bar\"></app-progressbar>\n      <img class=\"icon\" src=\"./assets/images/music-icon.svg\" type=\"image/svg+xml\">\n    </div>\n    <div class=\"time progressbar\">\n      <app-progressbar [percentage]=\"75\" [color]=\"'green'\" class=\"percent bar\"></app-progressbar>\n      <img class=\"icon\" src=\"./assets/images/time-icon.svg\" type=\"image/svg+xml\">\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -275,6 +278,73 @@ var NavbarComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/progressbar/progressbar.component.css":
+/***/ (function(module, exports) {
+
+module.exports = "/* CSS */\r\n.percent.bar {\r\n    height: 100%;\r\n    width: 100%;\r\n    background-color: white;\r\n    border-radius: 500px;\r\n    border: 1px solid gray;\r\n}\r\n.value {\r\n    height: 100%;\r\n    border-right: 1px solid gray;\r\n    border-top-left-radius: 500px;\r\n    border-bottom-left-radius: 500px;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/progressbar/progressbar.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"percent bar\">\n    <div class=\"value\" [style.width]=\"percentage + '%'\" [style.background]=\"gradient\"></div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/progressbar/progressbar.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProgressbarComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ProgressbarComponent = /** @class */ (function () {
+    function ProgressbarComponent() {
+    }
+    ProgressbarComponent.prototype.ngOnInit = function () {
+        if (this.color === 'blue') {
+            this.gradient = 'linear-gradient(#63b7f5, #539cd1)';
+        }
+        else if (this.color === 'yellow') {
+            this.gradient = 'linear-gradient(#f0e55f, #d5cc54)';
+        }
+        else if (this.color === 'green') {
+            this.gradient = 'linear-gradient(#60f594, #4fb974)';
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], ProgressbarComponent.prototype, "color", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Number)
+    ], ProgressbarComponent.prototype, "percentage", void 0);
+    ProgressbarComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-progressbar',
+            template: __webpack_require__("./src/app/progressbar/progressbar.component.html"),
+            styles: [__webpack_require__("./src/app/progressbar/progressbar.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ProgressbarComponent);
+    return ProgressbarComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/splash-screen/splash-screen.component.css":
 /***/ (function(module, exports) {
 
@@ -328,14 +398,14 @@ var SplashScreenComponent = /** @class */ (function () {
 /***/ "./src/app/stats-screen/stats-screen.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".stats {\r\n    -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n            justify-content: center;\r\n    margin: 20px;\r\n    padding: 10px;\r\n    border-radius: 20px;\r\n    background-color: lightgray;\r\n}\r\n\r\nh1 {\r\n    margin: unset;\r\n    padding: 5px 0;\r\n    text-align: center;\r\n}\r\n\r\n.progressbars {\r\n    padding: 0 35px;\r\n}\r\n\r\nobject.progressbar {\r\n    margin: 5px 0;\r\n}"
+module.exports = ".stats {\r\n    -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n            justify-content: center;\r\n    margin: 20px;\r\n    padding: 10px;\r\n    border-radius: 20px;\r\n    background-color: lightgray;\r\n}\r\n\r\nh1 {\r\n    margin: unset;\r\n    padding: 5px 0;\r\n    text-align: center;\r\n}\r\n\r\n.progressbars {\r\n    padding: 0 35px;\r\n}\r\n\r\n.progressbar {\r\n    height: 45px;\r\n    max-height: 5vh;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-pack: justify;\r\n        -ms-flex-pack: justify;\r\n            justify-content: space-between;\r\n    padding: 10px 0px;\r\n}"
 
 /***/ }),
 
 /***/ "./src/app/stats-screen/stats-screen.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\r\n\r\n<div class=\"stats\">\r\n    <h1>Stats</h1>\r\n    <div class=\"progressbars\">\r\n        <img class=\"progressbar\" src=\"./assets/images/progressbar-1.svg\" type=\"image/svg+xml\">\r\n        <img class=\"progressbar\" src=\"./assets/images/progressbar-2.svg\" type=\"image/svg+xml\">\r\n        <img class=\"progressbar\" src=\"./assets/images/progressbar-3.svg\" type=\"image/svg+xml\">\r\n        <img class=\"progressbar\" src=\"./assets/images/progressbar-4.svg\" type=\"image/svg+xml\">\r\n        <img class=\"progressbar\" src=\"./assets/images/progressbar-5.svg\" type=\"image/svg+xml\">\r\n        <img class=\"progressbar\" src=\"./assets/images/progressbar-6.svg\" type=\"image/svg+xml\">\r\n        <img class=\"progressbar\" src=\"./assets/images/progressbar-7.svg\" type=\"image/svg+xml\">\r\n        <img class=\"progressbar\" src=\"./assets/images/progressbar-8.svg\" type=\"image/svg+xml\">\r\n    </div>\r\n</div>"
+module.exports = "<app-navbar></app-navbar>\r\n\r\n<div class=\"stats\">\r\n    <h1>Stats</h1>\r\n    <div class=\"progressbars\">\r\n        <app-progressbar [percentage]=\"50\" [color]=\"'blue'\" class=\"progressbar\"></app-progressbar>\r\n        <app-progressbar [percentage]=\"60\" [color]=\"'yellow'\" class=\"progressbar\"></app-progressbar>\r\n        <app-progressbar [percentage]=\"75\" [color]=\"'green'\" class=\"progressbar\"></app-progressbar>\r\n        <app-progressbar [percentage]=\"50\" [color]=\"'blue'\" class=\"progressbar\"></app-progressbar>\r\n        <app-progressbar [percentage]=\"60\" [color]=\"'yellow'\" class=\"progressbar\"></app-progressbar>\r\n        <app-progressbar [percentage]=\"75\" [color]=\"'green'\" class=\"progressbar\"></app-progressbar>\r\n        <app-progressbar [percentage]=\"60\" [color]=\"'yellow'\" class=\"progressbar\"></app-progressbar>\r\n        <app-progressbar [percentage]=\"75\" [color]=\"'green'\" class=\"progressbar\"></app-progressbar>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
